@@ -1,2 +1,4 @@
 #!/usr/bin/python3
-import ZoP.txt
+with open("ZoP.txt", "r") as f:
+    content = f.read()
+print(content)
