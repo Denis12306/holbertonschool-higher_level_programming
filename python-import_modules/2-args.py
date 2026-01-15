@@ -1,17 +1,11 @@
 #!/usr/bin/python3
-import sys
 
 if __name__ == "__main__":
-    i = "Hello Welcome To The Best School"
-    words = i.split()
-
+    x = "Hello Welcome To The Best School"
+    words = x.split()
     count = len(words)
-    if count == 0:
-        print("0 argument.")
-    elif count == 1:
-        print("1 argument:")
-    else:
-        print(f"{count} arguments:")
 
-    for index, word in enumerate(words, start=1):
-        print(f"{index}: {word}")
+    print(f"{count} argument{'s' if count != 1 else ''}:")
+
+    for i in range(count):
+        print(f"{i + 1}: {words[i]}")
