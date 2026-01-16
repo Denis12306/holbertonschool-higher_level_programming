@@ -1,11 +1,13 @@
 #!/usr/bin/python3
-
 if __name__ == "__main__":
-    x = "Hello Welcome To The Best School"
-    words = x.split()
-    count = len(words)
+    import sys
 
-    print(f"{count} argument{'s' if count != 1 else ''}:")
-
+    count = len(sys.argv) - 1
+    if count == 0:
+        print("0 arguments.")
+    elif count == 1:
+        print("1 argument:")
+    else:
+        print("{} arguments:".format(count))
     for i in range(count):
-        print(f"{i + 1}: {words[i]}")
+        print("{}: {}".format(i + 1, sys.argv[i + 1]))
