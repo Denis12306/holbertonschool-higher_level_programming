@@ -14,6 +14,7 @@ General
     What are indexing and slicing in Python
     What is the official Python coding style and how to check your code with pycodestyle
 
+
     Why indentation is so important in Python
     How to use the if, if ... else statements
     How to use comments
@@ -41,6 +42,19 @@ General
     What is tuple packing
     What is sequence unpacking
     What is the del statement and how to use it
+
+
+    Why Python programming is awesome
+    What are sets and how to use them
+    What are the most common methods of set and how to use them
+    When to use sets versus lists
+    How to iterate into a set
+    What are dictionaries and how to use them
+    When to use dictionaries versus lists or sets
+    What is a key in a dictionary
+    How to iterate over a dictionary
+    What is a lambda function
+    What are the map, reduce and filter functions
 
 
 
