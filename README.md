@@ -1,12 +1,14 @@
 # holbertonschool-higher_level_programming
 Python - Hello, World
 Python - if/else, loops, functions
+Python - import & modules
+Python - Data Structures: Lists, Tuples
+Python - More Data Structures: Set, Dictionary
+Python - Exceptions
 
-Learning Objectives
 
+# LEARNING OBJECTIVES
 At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
-
-General
 
     How to use the Python interpreter
     How to print text and variables using print
@@ -57,8 +59,18 @@ General
     What are the map, reduce and filter functions
 
 
+    Why Python programming is awesome
+    What’s the difference between errors and exceptions
+    What are exceptions and how to use them
+    When do we need to use exceptions
+    How to correctly handle an exception
+    What’s the purpose of catching exceptions
+    How to raise a builtin exception
+    When do we need to implement a clean-up action after an exception
 
-Requirements
+
+
+# REQUIREMENTS
 Python Scripts
 
     Allowed editors: vi, vim, emacs
