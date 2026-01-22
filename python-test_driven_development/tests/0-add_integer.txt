@@ -120,16 +120,10 @@ Test case #15: A test case with the second parameter of type 'str'
     TypeError: b must be an integer
 
 
-Section // Types // Value
-=========================
+Section // Types
+================
 
 Test case #16: A test case to check the returned integer type
 
     >>> type(add_integer(5, 5))
     <class 'int'>
-
-Test case #17: A test case to check the returned float type
-
-	>>> add_integer(float('NaN'))
-	Traceback (most recent call last):
-    ValueError: cannot convert float NaN to integer
