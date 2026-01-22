@@ -127,3 +127,9 @@ Test case #16: A test case to check the returned integer type
 
     >>> type(add_integer(5, 5))
     <class 'int'>
+
+Test case #17: A test case to check the returned integer type
+
+	>>> add_integer(float(nan))
+	Traceback (most recent call last):
+    ValueError: cannot onvert float nan to integer
