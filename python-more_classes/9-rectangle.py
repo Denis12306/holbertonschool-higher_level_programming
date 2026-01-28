@@ -86,9 +86,6 @@ class Rectangle:
 
     @classmethod
     def square(cls, size=0):
-        """Create a new rectangle with square data"""
-        if not isinstance(size, int):
-            return
-        if size >= 0:
-            square = cls(size, size)
-            return square
+        """Create a new rectangle with size = widht = height"""
+        return cls(size, size)
+
