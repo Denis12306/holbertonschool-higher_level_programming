@@ -3,8 +3,8 @@
 
 
 class Rectangle:
+    """Parameters of the rectangle"""
     def __init__(self, width=0, height=0):
-        """Parameters of the rectangle"""
         self.width = width
         self.height = height
 
