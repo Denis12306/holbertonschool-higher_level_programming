@@ -88,4 +88,3 @@ class Rectangle:
     def square(cls, size=0):
         """Create a new rectangle with size = widht = height"""
         return cls(size, size)
-
