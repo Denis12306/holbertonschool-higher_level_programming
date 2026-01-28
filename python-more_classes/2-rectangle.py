@@ -3,7 +3,7 @@
 
 
 class Rectangle:
-    """Parameters of the rectangle"""
+    """Represent a rectangle"""
     def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
@@ -20,7 +20,7 @@ class Rectangle:
 
     @width.setter
     def width(self, value):
-        """Setter: the witdh of the rectangle"""
+        """Setter: the width of the rectangle"""
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value < 0:
@@ -45,4 +45,3 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return 0
         return (self.__width + self.__height) * 2
-
