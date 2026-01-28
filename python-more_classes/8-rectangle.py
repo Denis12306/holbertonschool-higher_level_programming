@@ -74,7 +74,7 @@ class Rectangle:
         print("Bye rectangle...")
 
     def bigger_or_equal(rect_1, rect_2):
-        """Compare the biggest rectangle based on the area"""
+        """Compare the rectangle based on the area and return the biggest"""
         if not isinstance(rect_1, Rectangle):
             raise TypeError("rect_1 must be an instance of Rectangle")
         if not isinstance(rect_2, Rectangle):
