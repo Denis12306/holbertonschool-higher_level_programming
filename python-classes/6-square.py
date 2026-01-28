@@ -1,12 +1,12 @@
 #!/usr/bin/python3
-"""Write a class Square that defines a square by: (based on 4-square.py)"""
+"""A class Square that defines a square by: (based on 4-square.py)"""
 
 
 class Square:
     """Define the parameters of the class square"""
     def __init__(self, size=0, position=(0, 0)):
-        self.__size = size
-        self.__position = position
+        self.size = size
+        self.position = position
 
     @property
     def size(self):
@@ -45,13 +45,9 @@ class Square:
     def my_print(self):
         """Print the square with #"""
         if self.size == 0:
-            print("")
-        else:
-            for i in range(self.position[1]):
-                print()
-            for i in range(self.size):
-                for j in range(self.position[0]):
-                    print(end=" ")
-                for k in range(self.size):
-                    print("#", end="")
-                print()
+            print()
+            return
+        for _ in range(self.position[1]):
+            print()
+        for _ in range(self.size):
+            print(" " * self.position[0] + "#" * self.size)
