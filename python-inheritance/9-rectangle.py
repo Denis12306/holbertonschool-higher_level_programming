@@ -3,7 +3,7 @@ class BaseGeometry:
     """Represent an empty class BaseGeometry"""
 
     def area(self):
-        """Parameter of the class BaseGeometry"""
+        """Area of the class BaseGeometry"""
         raise Exception("area() is not implemented")
 
     def integer_validator(self, name, value):
@@ -17,11 +17,20 @@ class BaseGeometry:
         if value <= 0:
             raise ValueError(f"{name} must be greater than 0")
 
+
 class Rectangle(BaseGeometry):
     """Represent an empty class Rectangle with inheritage of previous class"""
-    def __init__(self, width, height):
-        self.__width = width
-        self.integer_validator("width", width)
-        self.__height = height
-        self.integer_validator("height", height)
 
+    def __init__(self, width, height):
+        self.integer_validator("height", height)
+        self.integer_validator("width", width)
+
+        self.__width = width
+        self.__height = height
+
+    def area(self):
+        """Area of the class BaseGeometry"""
+        return self.__height * self.__width
+
+    def __str__(self):
+        return f"[Rectangle] {self.__width}/{self.__height}"
