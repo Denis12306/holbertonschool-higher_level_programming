@@ -35,12 +35,13 @@ class Rectangle(BaseGeometry):
     def __str__(self):
         return f"[Rectangle] {self.__width}/{self.__height}"
 
+
 class Square(Rectangle):
     """Represent a class Square with Rectangle attributs """
+
     def __init__(self, size):
         self.integer_validator("size", size)
         super().__init__(size, size)
 
     def __str__(self):
         return "[Square] " + super().__str__().split(" ", 1)[1]
-
