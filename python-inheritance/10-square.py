@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""Define a class BaseGeometry"""
+
+
 class BaseGeometry:
     """Represent an empty class BaseGeometry"""
 
@@ -7,8 +10,6 @@ class BaseGeometry:
         raise Exception("area() is not implemented")
 
     def integer_validator(self, name, value):
-        """Parameter of the class BaseGeometry that check
-         if value is a valid int"""
         self.name = name
         self.value = value
 
@@ -19,7 +20,7 @@ class BaseGeometry:
 
 
 class Rectangle(BaseGeometry):
-    """Represent an empty class Rectangle with inheritage of previous class"""
+    """Define e class Rectangle with inheritage of BaseGeometry class"""
 
     def __init__(self, width, height):
         self.integer_validator("height", height)
@@ -29,7 +30,7 @@ class Rectangle(BaseGeometry):
         self.__height = height
 
     def area(self):
-        """Area of the class BaseGeometry"""
+        """Area of the Rectangle"""
         return self.__height * self.__width
 
     def __str__(self):
