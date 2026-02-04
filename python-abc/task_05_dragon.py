@@ -1,26 +1,35 @@
-#!/usr/bin/python
-"""Design two mixin classes, SwimMixin and FlyMixin, each equipped with methods
-swim and fly respectively. Next, construct a class Dragon that inherits from
-both these mixins. Your aim is to show that a Dragon instance can both
-swim and fly."""
-
-
+#!/usr/bin/python3
 class SwimMixin:
-    """Define the Mixin Swim class"""
+    """A mixin class that provides swimming behavior.
+
+    Methods:
+        swim(): Prints a message indicating the creature swims.
+    """
 
     def swim(self):
+        """Prints a message indicating the creature swims."""
         print("The creature swims!")
 
 
 class FlyMixin:
-    """Define the Mixin Fly class"""
+    """A mixin class that provides flying behavior.
+
+    Methods:
+        fly(): Prints a message indicating the creature flies.
+    """
 
     def fly(self):
+        """Prints a message indicating the creature flies."""
         print("The creature flies!")
 
 
 class Dragon(SwimMixin, FlyMixin):
-    """Define the Dragon class with 2 previous class"""
+    """A class representing a dragon that can swim and fly.
+
+    Methods:
+        roar(): Prints a message indicating the dragon roars.
+    """
 
     def roar(self):
-        print("The Dragon roars!")
+        """Prints a message indicating the dragon roars."""
+        print("The dragon roars!")
