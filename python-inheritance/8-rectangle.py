@@ -3,7 +3,7 @@
 
 
 class BaseGeometry:
-    """Represent base geometry"""
+    """Represent a class BaseGeometry"""
 
     def area(self):
         raise Exception("area() is not implemented")
