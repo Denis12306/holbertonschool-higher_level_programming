@@ -24,12 +24,3 @@ class Dragon(SwimMixin, FlyMixin):
 
     def roar(self):
         print("The Dragon roars!")
-
-    def spit_fireball(self):
-        print("The Dragon spit a fireball!")
-
-        draco = Dragon()
-        draco.swim()
-        draco.fly()
-        draco.roar()
-        draco.spit_fireball()
