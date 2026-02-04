@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Define classes BaseGeometry and Rectangle"""
+"""Define a class BaseGeometry and a class Rectangle with BG parameters"""
 
 
 class BaseGeometry:
@@ -16,7 +16,7 @@ class BaseGeometry:
 
 
 class Rectangle(BaseGeometry):
-    """Represent a rectangle"""
+    """Represent a rectangle using BaseGeometry"""
 
     def __init__(self, width, height):
         """Intialize a new Rectangle.
