@@ -1,25 +1,31 @@
 #!/usr/bin/python3
-"""Learn how to serialize and deserialize custom Python
-objects using the pickle module"""
+"""task_01_pickle.py - Custom object serialization using pickle"""
 import pickle
 
 
 class CustomObject:
-    """Represent a class CustomObjet"""
-
     def __init__(self, name, age, is_student):
-        """Initialised the 3 asking parameters"""
         self.name = name
         self.age = age
         self.is_student = is_student
 
+    def display(self):
+        print(f"Name: {self.name}")
+        print(f"Age: {self.age}")
+        print(f"Is Student: {self.is_student}")
+
     def serialize(self, filename):
-        """This method will take a filename as its parameter"""
-        with open(filename, "wb") as f:
-            pickle.dump(self, f)
+        try:
+            with open(filename, "wb") as f:
+                pickle.dump(self, f)
+            return True
+        except Exception:
+            return None
 
     @classmethod
     def deserialize(cls, filename):
-        """Deserialised the object"""
-        with open(filename, "rb") as f:
-            return pickle.load(f)
+        try:
+            with open(filename, "rb") as f:
+                return pickle.load(f)
+        except Exception:
+            return None
