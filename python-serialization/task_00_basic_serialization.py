@@ -6,18 +6,22 @@ import json
 
 
 def serialize_and_save_to_file(data, filename):
-    """A Python Dictionary with data with output JSON file."""
-    try:
-        with open(filename, "w", encoding="utf-8") as f:
-            json.dump(data, f)
-    except Exception:
-        return None
+    """Function to serialize and save to the specified file"""
+
+    # Serializing the data
+    content = json.dumps(data)
+
+    # Writing serialized data to the file
+    with open(filename, 'w') as file:
+        file.write(content)
 
 
 def load_and_deserialize(filename):
-    """Deserialised the Python object"""
-    try:
-        with open(filename, "r", encoding="utf-8") as f:
-            return json.load(f)
-    except Exception:
-        return None
+    """Function to load and deserialize"""
+
+    # Reading file content for deserialization
+    with open(filename, 'r', encoding='UTF-8') as file:
+        content = file.read()
+
+    # Returning deserialized data
+    return json.loads(content)
