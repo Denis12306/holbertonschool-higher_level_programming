@@ -13,20 +13,17 @@ def home():
 
 
 @app.route("/data")
-def get_usernames():
-    """Return the list of all usernames"""
+def get_data():
     return jsonify(list(users.keys()))
 
 
 @app.route("/status")
 def status():
-    """Return the status"""
     return "OK"
 
 
 @app.route("/users/<username>")
 def get_user(username):
-    """Return full user object if exists"""
     if username not in users:
         return jsonify({"error": "User not found"}), 404
 
@@ -35,7 +32,7 @@ def get_user(username):
 
 @app.route("/add_user", methods=["POST"])
 def add_user():
-    """Add a new user to the API"""
+    # Invalid JSON
     if not request.is_json:
         return jsonify({"error": "Invalid JSON"}), 400
 
@@ -49,14 +46,13 @@ def add_user():
         return jsonify({"error": "Username already exists"}), 409
 
     users[username] = {
-        "username": data.get("username"),
+        "username": username,
         "name": data.get("name"),
         "age": data.get("age"),
         "city": data.get("city")
     }
 
-    return jsonify(users[username]), 201
-
-
-if __name__ == "__main__":
-    app.run(debug=True)
+    return jsonify({
+        "message": "User added",
+        "user": users[username]
+    }), 201
