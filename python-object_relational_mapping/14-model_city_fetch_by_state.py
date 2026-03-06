@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """Write a Python file similar to model_state.py named model_city.py that
 contains the class definition of a City.
 City class: inherits from Base (imported from model_state), links to the
@@ -7,7 +8,6 @@ attribute name that represents a column of a string of 128 characters
 and can't be null, class attribute state_id that represents a column of an
 integer, can't be null and is a foreign key to states.id
 You must use the module SQLAlchemy
-
 Next, write a script 14-model_city_fetch_by_state.py that prints all City
 objects from the database hbtn_0e_14_usa:
 Your script should take 3 arguments: mysql username, mysql password and
