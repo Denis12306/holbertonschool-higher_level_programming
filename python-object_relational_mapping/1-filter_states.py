@@ -11,35 +11,21 @@ Your code should not be executed when imported"""
 import MySQLdb
 import sys
 
+
 if __name__ == "__main__":
-    arguments = sys.argv[1:]
-
-    if len(arguments) != 3:
-        print("Invalid number of arguments !")
-        exit()
-
-    user, password, db_name = arguments
-
-    try:
-        db_connection = MySQLdb.connect(
-            host="localhost",
-            user=user,
-            password=password,
-            db=db_name,
-            port=3306
-        )
-    except Exception as e:
-        print("Can't connect to the database:", e)
-        exit()
-
-    cursor = db_connection.cursor()
-
-    cursor.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC")
-
-    row = cursor.fetchone()
-    while row:
+    db = MySQLdb.connect(
+        host="localhost",
+        port=3306,
+        user=sys.argv[1],
+        passwd=sys.argv[2],
+        db=sys.argv[3]
+    )
+    cursor = db.cursor()
+    cursor.execute(
+        "SELECT * FROM states WHERE name LIKE BINARY 'N%' ORDER BY id ASC"
+    )
+    rows = cursor.fetchall()
+    for row in rows:
         print(row)
-        row = cursor.fetchone()
-
     cursor.close()
-    db_connection.close()
+    db.close()
