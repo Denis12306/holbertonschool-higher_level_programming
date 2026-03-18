@@ -5,6 +5,6 @@
     You must use console.log(...) to print all output
     You are not allowed to use var
 */
-const myVar = "JavaScript is amazing";
+const myVar = 'JavaScript is amazing';
 
 console.log(myVar);
