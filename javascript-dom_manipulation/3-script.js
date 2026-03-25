@@ -6,14 +6,14 @@
    If the current class is red, when the user click on id toggle_header
    element, the class must be updated to green ; and the reverse.
 */
-const toggleButton = document.querySelector("#toggle_header");
-const header = document.querySelector("header");
+const toggleButton = document.querySelector('#toggle_header');
+const header = document.querySelector('header');
 
-if (!header.classList.contains("red") && !header.classList.contains("green")) {
-  header.classList.add("red");
+if (!header.classList.contains('red') && !header.classList.contains('green')) {
+  header.classList.add('red');
 }
 
-toggleButton.addEventListener("click", function() {
-  header.classList.toggle("red");
-  header.classList.toggle("green");
+toggleButton.addEventListener('click', function () {
+  header.classList.toggle('red');
+  header.classList.toggle('green');
 });

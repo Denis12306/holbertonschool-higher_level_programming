@@ -5,15 +5,15 @@
     You must use the Fetch API.
     You probably should read something about usign Promises later.
 */
-const characterElement = document.querySelector("#character");
+const characterElement = document.querySelector('#character');
 
-fetch("https://swapi-api.hbtn.io/api/people/5/?format=json")
-  .then(function(response) {
+fetch('https://swapi-api.hbtn.io/api/people/5/?format=json')
+  .then(function (response) {
     return response.json();
   })
-  .then(function(data) {
+  .then(function (data) {
     characterElement.textContent = data.name;
   })
-  .catch(function(error) {
-    console.error("Error fetching data:", error);
+  .catch(function (error) {
+    console.error('Error fetching data:', error);
   });

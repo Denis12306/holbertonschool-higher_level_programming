@@ -4,14 +4,14 @@
    The new element must be: <li>Item</li> The new element must be added to the
    ul element with class my_list
 */
-const addButton = document.querySelector("#add_item");
+const addButton = document.querySelector('#add_item');
 
-const list = document.querySelector(".my_list");
+const list = document.querySelector('.my_list');
 
-addButton.addEventListener("click", function() {
-  const newItem = document.createElement("li");
+addButton.addEventListener('click', function () {
+  const newItem = document.createElement('li');
 
-  newItem.textContent = "Item";
+  newItem.textContent = 'Item';
 
   list.appendChild(newItem);
 });
